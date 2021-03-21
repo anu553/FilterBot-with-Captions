@@ -19,7 +19,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-*Hello {}, My Name is* {} !. 
+*Hello {}, My Name is* {} !. *ഈ ബോട്ട് തികച്ചും @FILM_WORL ഗ്രൂപ്പിലേക്ക് ആണ്. ഞാൻ ആണ് ആ ഗ്രൂപ്പിൽ സിനിമകൾ നൽകുന്നത്😁.*
 
 *I'm Filter Manager Bot Maintained By* [{}](https://t.me/{}). 
 
@@ -127,8 +127,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(DEVIL_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
-                                                  [[InlineKeyboardButton(text="♻️Stream Channel",url="https://telegram.dog/Movies_stream"),InlineKeyboardButton(text="📺TV Series Channel",url="https://telegram.dog/TVSeries_FC")],
-                                                [InlineKeyboardButton(text="🎬Film Group",url="https://telegram.dog/filmclublovers"),InlineKeyboardButton(text="💠HEVC Channel",url="https://telegram.dog/FC_HEVC")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+                                                  [[InlineKeyboardButton(text="⭕Channel⭕",url="https://t.me/joinchat/VtTZc5al3Vt0te9_"),InlineKeyboardButton(text="⭕Series Channel⭕",url="https://t.me/joinchat/R5wnoclbG6Bcgyk8")],
+                                                [InlineKeyboardButton(text="⭕Group⭕",url="https://t.me/FILM_WORL"),InlineKeyboardButton(text="⭕OTT Channel⭕",url="https://t.me/joinchat/Tosat0NY-iQxv80o")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
          
 
